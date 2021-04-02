@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "193159956561",
+    "project_id": "petnatunutri",
+    "storage_bucket": "petnatunutri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193159956561:android:acdebe71fcb85f1b661070",
+        "android_client_info": {
+          "package_name": "br.crateus.kariri.petnatunutri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193159956561-1nf0l8hjp3kse4io4atsifj0gj0din1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQMRZE6x83o8txsdejcSHqolVngFKDtJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193159956561-1nf0l8hjp3kse4io4atsifj0gj0din1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
