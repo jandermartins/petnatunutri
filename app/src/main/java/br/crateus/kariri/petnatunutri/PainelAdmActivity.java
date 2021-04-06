@@ -23,7 +23,7 @@ public class PainelAdmActivity extends AppCompatActivity {
         btCadastrarPet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PainelAdmActivity.this, CadastrarPetActivity.class));
+                startActivity(new Intent(PainelAdmActivity.this, .class));
             }
         });
 
