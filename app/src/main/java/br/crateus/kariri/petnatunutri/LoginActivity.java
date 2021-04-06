@@ -10,6 +10,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-//        VerificaLogado();
+        VerificaLogado();
         super.onStart();
     }
 
@@ -42,36 +43,38 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-//        //btEntrar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            Log.d("ok", "signInWithEmail:success");
-//                            mUser = mAuth.getCurrentUser();
-//                            //startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
-//                        }else {
-//                            mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(), etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<AuthResult> task) {
-//                                    Log.i("user", "criado");
-//                                    mUser = mAuth.getCurrentUser();
-//                                    //startActivity(new Intent(LoginActivity.this, CadastrarUsuarioActivity.class));
-//                                }
-//                            });
-//                        }
-//                    }
-//                });
-//            }
-//        });
+        btEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signInWithEmailAndPassword(etEmail.getText().toString(),
+                        etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Log.d("ok", "signInWithEmail:success");
+                            mUser = mAuth.getCurrentUser();
+                            //startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+                        }else {
+                            mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(),
+                                    etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Log.i("user", "criado");
+                                    mUser = mAuth.getCurrentUser();
+                                    //startActivity(new Intent(LoginActivity.this, CadastrarUsuarioActivity.class));
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        });
     }
 
-//    private void VerificaLogado() {
-//        mUser = mAuth.getCurrentUser();
-//        if(mUser != null){
-//            startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
-//        }
-//    }
+    private void VerificaLogado() {
+        mUser = mAuth.getCurrentUser();
+        if(mUser != null){
+            startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+        }
+    }
 }
