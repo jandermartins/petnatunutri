@@ -1,4 +1,4 @@
-package br.crateus.kariri.petnatunutri;
+package br.crateus.kariri.petnatunutri.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import br.crateus.kariri.petnatunutri.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -53,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Log.d("ok", "signInWithEmail:success");
                             mUser = mAuth.getCurrentUser();
-                            //startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+                            startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
                         }else {
                             mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(),
                                     etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     Log.i("user", "criado");
                                     mUser = mAuth.getCurrentUser();
-                                    //startActivity(new Intent(LoginActivity.this, CadastrarUsuarioActivity.class));
+                                    startActivity(new Intent(LoginActivity.this, CadastrarUsuarioActivity.class));
                                 }
                             });
                         }

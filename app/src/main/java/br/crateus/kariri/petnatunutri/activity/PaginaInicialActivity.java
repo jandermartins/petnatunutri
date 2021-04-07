@@ -1,4 +1,4 @@
-package br.crateus.kariri.petnatunutri;
+package br.crateus.kariri.petnatunutri.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import br.crateus.kariri.petnatunutri.R;
 
 public class PaginaInicialActivity extends AppCompatActivity {
 

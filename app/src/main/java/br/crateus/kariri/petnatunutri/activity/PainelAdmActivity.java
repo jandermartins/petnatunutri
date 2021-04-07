@@ -1,4 +1,4 @@
-package br.crateus.kariri.petnatunutri;
+package br.crateus.kariri.petnatunutri.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import br.crateus.kariri.petnatunutri.R;
 
 public class PainelAdmActivity extends AppCompatActivity {
 
@@ -23,14 +25,14 @@ public class PainelAdmActivity extends AppCompatActivity {
         btCadastrarPet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PainelAdmActivity.this, .class));
+//                startActivity(new Intent(PainelAdmActivity.this, .class));
             }
         });
 
         btCadastraTutor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PainelAdmActivity.this, CadastrarTutorActivity.class));
+//                startActivity(new Intent(PainelAdmActivity.this, CadastrarTutorActivity.class));
             }
         });
     }

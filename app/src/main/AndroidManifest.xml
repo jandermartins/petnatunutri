@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetNatuNutri">
-        <activity android:name=".PainelAdmActivity"></activity>
-        <activity android:name=".PaginaInicialActivity">
+        <activity android:name=".activity.CadastrarUsuarioActivity"></activity>
+        <activity android:name=".activity.PainelAdmActivity" />
+        <activity android:name=".activity.PaginaInicialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
