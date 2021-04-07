@@ -16,24 +16,24 @@ public class PainelAdmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_painel_adm);
 
-        Button btCadastrarPet, btVerCadastro, btCadastraTutor;
+        Button btCadastrarNovaDieta, btAtribuiNovaDieta, btBuscarTutor;
 
-        btCadastrarPet = (Button) findViewById(R.id.btAtribuirDieta);
-        btVerCadastro = (Button) findViewById(R.id.btVerCadastroPa);
-        btCadastraTutor = (Button) findViewById(R.id.btCadastrarNovaDieta);
+        btCadastrarNovaDieta = (Button) findViewById(R.id.btCadastrarNovaDieta);
+        btAtribuiNovaDieta = (Button) findViewById(R.id.btVerCadastroPa);
+        btBuscarTutor = (Button) findViewById(R.id.btBuscarTuto);
 
-        btCadastrarPet.setOnClickListener(new View.OnClickListener() {
+        btCadastrarNovaDieta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(PainelAdmActivity.this, .class));
+                startActivity(new Intent(PainelAdmActivity.this, CadastrarNovaDietaActivity.class));
             }
         });
 
-        btCadastraTutor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                startActivity(new Intent(PainelAdmActivity.this, CadastrarTutorActivity.class));
-            }
-        });
+//        btAtribuiNovaDieta.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               startActivity(new Intent(PainelAdmActivity.this, CadastrarTutorActivity.class));
+//            }
+//        });
     }
 }
