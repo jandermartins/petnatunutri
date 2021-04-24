@@ -19,7 +19,7 @@ public class PainelAdmActivity extends AppCompatActivity {
         Button btCadastrarNovaDieta, btAtribuiNovaDieta, btBuscarTutor;
 
         btCadastrarNovaDieta = (Button) findViewById(R.id.btCadastrarNovaDieta);
-        btAtribuiNovaDieta = (Button) findViewById(R.id.btVerCadastroPa);
+        btAtribuiNovaDieta = (Button) findViewById(R.id.btAtribuirDieta);
         btBuscarTutor = (Button) findViewById(R.id.btBuscarTuto);
 
         btCadastrarNovaDieta.setOnClickListener(new View.OnClickListener() {
@@ -29,11 +29,11 @@ public class PainelAdmActivity extends AppCompatActivity {
             }
         });
 
-//        btAtribuiNovaDieta.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//               startActivity(new Intent(PainelAdmActivity.this, CadastrarTutorActivity.class));
-//            }
-//        });
+        btAtribuiNovaDieta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(PainelAdmActivity.this, AtribuirDietaActivity.class));
+            }
+        });
     }
 }

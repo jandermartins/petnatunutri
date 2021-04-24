@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("ok", "signInWithEmail:success");
                             mUser = mAuth.getCurrentUser();
                             startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
-                        }else {
+                        }if(task.isCanceled()) {
                             mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(),
                                     etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
