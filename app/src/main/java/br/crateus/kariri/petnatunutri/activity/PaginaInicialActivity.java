@@ -30,6 +30,14 @@ public class PaginaInicialActivity extends AppCompatActivity {
         Button btPainelAdmPI = (Button) findViewById(R.id.btPainelAdmPI);
         Button btSair = (Button) findViewById(R.id.btSair);
         Button btDados = (Button) findViewById(R.id.btVerCadastroPa);
+        Button btVerPets = (Button) findViewById(R.id.btVerPetsCadastrado);
+
+        btVerPets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PaginaInicialActivity.this, VerPetsCadastradoActivity.class));
+            }
+        });
 
         btDados.setOnClickListener(new View.OnClickListener() {
             @Override

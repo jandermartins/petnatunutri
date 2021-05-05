@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetNatuNutri">
-        <activity android:name=".activity.MeusDadosActivity"></activity>
+        <activity android:name=".activity.VerPetsCadastradoActivity"></activity>
+        <activity android:name=".activity.VerPetActivity" />
+        <activity android:name=".activity.MeusDadosActivity" />
         <activity android:name=".activity.AtribuirDietaActivity" />
         <activity android:name=".activity.CadastrarNovaDietaActivity" />
         <activity android:name=".activity.CadastrarUsuarioActivity" />
